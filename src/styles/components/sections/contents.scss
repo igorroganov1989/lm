@@ -1,0 +1,39 @@
+.contents {
+  &__wrapper {
+    background-color: var(--bg-deep-grey);
+    padding: 40px 32px;
+    border-radius: 16px;
+    @media (max-width: 1024px) {
+      padding: 24px 16px;
+    }
+  }
+  &__title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+  }
+  &__list {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  &__item {
+    color: var(--grey);
+    font-weight: 250;
+    font-size: 16px;
+    line-height: 24px;
+    position: relative;
+    padding-left: 14px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      background-color: var(--slate);
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      top: 10px;
+    }
+  }
+}

@@ -1,0 +1,114 @@
+.articles {
+  &__slider {
+    margin-top: 44px;
+  }
+  &__slide {
+    background-color: var(--bg-deep-grey);
+    border-radius: 16px;
+    height: auto !important;
+    @media (max-width: 1648px) {
+      width: 500px !important;
+    }
+    @media (max-width: 768px) {
+      width: 264px !important;
+    }
+  }
+  &__img-wrapper {
+    height: 290px;
+    display: flex;
+    align-items: center;
+    @media (max-width: 768px) {
+      height: auto;
+    }
+  }
+  &__img {
+    width: 100%;
+    border-radius: 16px 16px 0 0;
+  }
+  &__slide-body {
+    padding: 36px 32px;
+    @media (max-width: 1024px) {
+      padding: 20px 16px;
+    }
+  }
+  &__slider-footer {
+    margin-top: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__slide-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    margin-top: 28px;
+    @media (max-width: 1024px) {
+      font-size: 16px;
+      line-height: 24px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      margin-top: 14px;
+    }
+  }
+  &__slider-navigation {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+  &__price {
+    margin-top: 18px;
+    color: var(--steel);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 16px;
+  }
+  &__text {
+    margin-top: 18px;
+    color: var(--grey);
+    font-weight: 250;
+    font-size: 16px;
+    line-height: 24px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    @media (max-width: 1024px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+  &__more {
+    margin-top: 18px;
+    color: var(--steel);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    display: block;
+  }
+  &__tags {
+    display: flex;
+    gap: 12px;
+    margin-top: 18px;
+  }
+  &__tag {
+    color: var(--grey);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 14px;
+    padding: 13px 16px;
+    border: 1px solid var(--slate);
+    border-radius: 8px;
+    display: block;
+    width: fit-content;
+    text-decoration: none;
+  }
+  &__date {
+    color: var(--steel);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    margin-top: 28px;
+  }
+}

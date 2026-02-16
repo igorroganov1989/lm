@@ -1,0 +1,112 @@
+.footer {
+  &__outer {
+    background-color: var(--bg-deep-grey);
+    padding: 60px 0;
+    @media (max-width: 1024px) {
+      padding: 40px 0;
+    }
+  }
+  &__columns {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+  &__social {
+    margin-top: 30px;
+  }
+  &__copyright-wrapper {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 1024px) {
+      display: none;
+    }
+    &--mobile {
+      display: none;
+      @media (max-width: 1024px) {
+        display: flex;
+      }
+    }
+  }
+  &__copyright {
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 14px;
+    color: var(--grey);
+    text-decoration: none;
+    padding-bottom: 20px;
+    display: block;
+    &:last-child {
+      padding-top: 10px;
+    }
+  }
+  &__column {
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 1024px) {
+      text-align: center;
+      align-items: center;
+    }
+    &--nav {
+      @media (max-width: 1024px) {
+        display: none;
+      }
+    }
+  }
+  &__column-title {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  &__column-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding-top: 28px;
+  }
+  &__column-link {
+    text-decoration: none;
+    color: var(--grey);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 16px;
+    &:hover {
+      text-decoration: underline;
+      text-decoration-style: wavy;
+      text-decoration-thickness: 1px;
+    }
+  }
+  &__info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+    padding-top: 28px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__info-main {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 388px;
+    @media (max-width: 1200px) {
+      max-width: 300px;
+    }
+  }
+  &__info-sub {
+    color: var(--grey);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+  }
+}

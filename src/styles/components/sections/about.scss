@@ -1,0 +1,115 @@
+.about {
+  &__body {
+    display: flex;
+    gap: 32px;
+    margin-top: 44px;
+    @media (max-width: 1420px) {
+      gap: 24px;
+      flex-direction: column;
+    }
+    @media (max-width: 768px) {
+      margin-top: 22px;
+    }
+  }
+  &__info {
+    flex: 1;
+  }
+  &__cards {
+    flex: 1;
+  }
+  &__info-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    @media (max-width: 768px) {
+      font-size: 20px;
+      line-height: 28px;
+    }
+  }
+  &__info-text {
+    margin-top: 22px;
+    color: var(--grey);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 32px;
+    @media (max-width: 768px) {
+      font-size: 14px;
+      line-height: 24px;
+      gap: 0;
+    }
+  }
+  &__buttons {
+    margin-top: 73px;
+    display: flex;
+    gap: 16px;
+    &--mobile {
+      display: none;
+    }
+    @media (max-width: 1420px) {
+      display: none;
+      &--mobile {
+        margin: 0;
+        display: flex;
+      }
+    }
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__card {
+    width: 50%;
+    padding: 48px 20px;
+    &:nth-child(1) {
+      border-right: 1px solid var(--slate);
+      border-bottom: 1px solid var(--slate);
+    }
+    &:nth-child(2) {
+      padding-left: 80px;
+      border-bottom: 1px solid var(--slate);
+    }
+    &:nth-child(3) {
+      border-right: 1px solid var(--slate);
+    }
+    &:nth-child(4) {
+      padding-left: 80px;
+    }
+    @media (max-width: 768px) {
+      padding: 32px 16px !important;
+    }
+  }
+  &__card-main-text {
+    font-weight: 100;
+    font-size: 60px;
+    line-height: 80px;
+    @media (max-width: 768px) {
+      font-size: 36px;
+      line-height: 36px;
+    }
+    &--small {
+      font-size: 56px;
+      line-height: 56px;
+      @media (max-width: 768px) {
+        font-size: 28px;
+        line-height: 32px;
+      }
+    }
+  }
+  &__card-secondary-text {
+    color: var(--grey);
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 28px;
+    @media (max-width: 768px) {
+      margin-top: 18px;
+      font-size: 12px;
+      line-height: 18px;
+    }
+  }
+}

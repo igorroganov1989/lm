@@ -1,0 +1,25 @@
+.clients {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    overflow-x: auto;
+    margin-top: 48px;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      gap: 16px;
+      margin-top: 24px;
+    }
+  }
+  &__logo {
+    height: 114px;
+    @media (max-width: 768px) {
+      height: 60px;
+    }
+  }
+}

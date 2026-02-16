@@ -1,0 +1,30 @@
+.listing {
+  &__wrapper {
+    margin-top: 44px;
+  }
+  &__tabs {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  &__tab {
+    &--active {
+      .listing__tab-link {
+        color: var(--white);
+        background-color: var(--slate);
+      }
+    }
+  }
+  &__tab-link {
+    white-space: nowrap;
+    color: var(--grey);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--slate);
+    padding: 14px 18px;
+    border-radius: 8px;
+    text-decoration: none;
+  }
+}

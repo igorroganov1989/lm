@@ -1,0 +1,104 @@
+.service-details {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  &__inner {
+    background-color: var(--bg-deep-grey);
+    border-radius: 16px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    @media (max-width: 1024px) {
+      padding: 24px 16px;
+    }
+    @media (max-width: 768px) {
+      gap: 24px;
+    }
+  }
+  &__img {
+    border-radius: 16px;
+    width: 100%;
+  }
+  &__title {
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 40px;
+    @media (max-width: 768px) {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+  &__section {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    p {
+      color: var(--grey);
+      font-weight: 200;
+      font-size: 18px;
+      line-height: 32px;
+      @media (max-width: 768px) {
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+  }
+  &__small-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: var(--white);
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    &--numbers {
+      counter-reset: list-counter;
+
+      .service-details__item {
+        padding-left: 28px;
+
+        &::before {
+          counter-increment: list-counter;
+          content: counter(list-counter) ".";
+          position: absolute;
+          left: 0;
+          top: 0;
+
+          width: auto;
+          height: auto;
+          background: none;
+          border-radius: 0;
+
+          color: var(--grey);
+          font-weight: 250;
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+  &__item {
+    color: var(--grey);
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 32px;
+    position: relative;
+    padding-left: 14px;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      background-color: var(--slate);
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      top: 14px;
+    }
+  }
+}

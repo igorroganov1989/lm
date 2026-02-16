@@ -1,0 +1,101 @@
+.contacts {
+  &__body {
+    display: flex;
+    gap: 32px;
+    margin-top: 24px;
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+  }
+  &__main {
+    flex: 1;
+    background-color: var(--bg-deep-grey);
+    border-radius: 16px;
+    padding: 36px 32px;
+    @media (max-width: 1024px) {
+      padding: 24px 16px;
+    }
+  }
+  &__map-wrapper {
+    flex: 1;
+  }
+  &__info-list {
+    display: flex;
+    flex-direction: column;
+    gap: 37px;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  &__info-main {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 388px;
+    @media (max-width: 1200px) {
+      max-width: 300px;
+    }
+    @media (max-width: 1024px) {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+  &__info-sub {
+    color: var(--grey);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 14px;
+    @media (max-width: 1024px) {
+      font-family: Geologica;
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+  &__social {
+    margin-top: 37px;
+  }
+  &__map-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
+    .map-marker {
+      position: relative;
+      width: 36px;
+      height: 45px;
+
+      transform: translate(-50%, -100%);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .map-marker:hover {
+      transform: translate(-50%, -110%) scale(1.08);
+    }
+
+    .map-marker__icon {
+      width: 100%;
+      height: 100%;
+      display: block;
+      filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.35));
+      fill: #fe5722;
+    }
+  }
+  &__map {
+    width: 100% !important;
+    canvas {
+      filter: grayscale(1) brightness(0.4);
+    }
+  }
+}
+
+.ymaps-layers-pane {
+  filter: grayscale(1);
+  -ms-filter: grayscale(1);
+  -webkit-filter: grayscale(1);
+  -moz-filter: grayscale(1);
+  -o-filter: grayscale(1);
+}

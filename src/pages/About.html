@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>О компании</title>
+    <link rel="stylesheet" href="/styles/style.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+  </head>
+  <body>
+    {{> sections/Header }} {{> sections/Menu }} {{> MegaMenu }} {{> MegaMenuMobile }}
+
+    <main class="main">
+      <div class="main__wrapper">
+        {{> BreadCrumbs breadcrumbs=breadcrumbsAbout}}
+        <div class="main__container container">
+          <h1 class="main__title">О компании</h1>
+        </div>
+
+        {{> sections/About }} {{> sections/Clients }} {{> sections/Reviews}} {{> sections/Team }} {{> sections/Differences }} {{> sections/Request isGrey=true}}
+        {{> sections/Equipment }} {{> sections/Stages }} {{> sections/Portfolio}} {{> sections/VideoSection}} {{> sections/Services }} {{> sections/Calculator}}
+        {{> sections/Prices}} {{> sections/Questions}} {{> sections/Articles}} {{> sections/Contacts}}
+      </div>
+    </main>
+
+    {{> sections/Footer }} {{> PopupCalculation}} {{> PopupRequest}}
+
+    <script type="module" src="../scripts/main.js"></script>
+  </body>
+</html>

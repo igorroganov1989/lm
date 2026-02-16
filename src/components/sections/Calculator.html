@@ -1,0 +1,56 @@
+<section class="calculator section">
+  <div class="calculator__wrapper section__wrapper container">
+    <h2 class="calculator__title section__title">Онлайн-калькулятор</h2>
+    <div class="calculator__subtitle section__subtitle">Быстрый расчёт стоимости по вашему чертежу</div>
+    <div class="calculator__inner">
+      <form action="#" class="calculator__form">
+        <div class="calculator__dropzone-wrapper">
+          <input type="file" id="calculator-filepond" class="calculator__file-input" name="files[]" multiple />
+        </div>
+        <div class="calculator__fields">
+          <div class="calculator__field">
+            <span class="calculator__field-label">Выберите материал</span>
+            <select class="calculator__input" data-select name="material">
+              <option value="">Материал</option>
+              <option value="option_1">Вариант 1</option>
+              <option value="option_2">Вариант 2</option>
+              <option value="option_3">Вариант 3</option>
+              <option value="option_4">Вариант 4</option>
+            </select>
+          </div>
+          <div class="calculator__field">
+            <span class="calculator__field-label">Толщина материала, мм</span>
+            <select class="calculator__input" data-select name="thickness">
+              <option value="1">1 мм</option>
+              <option value="2">2 мм</option>
+              <option value="3">3 мм</option>
+              <option value="4">4 мм</option>
+              <option value="5">5 мм</option>
+            </select>
+          </div>
+          <div class="calculator__field">
+            <span class="calculator__field-label">Количество изделий, шт.</span>
+            <input type="number" class="calculator__input" value="100" name="amount" />
+          </div>
+          <div class="calculator__field">
+            <span class="calculator__field-label">Срочность, дней</span>
+            <select class="calculator__input" data-select name="days">
+              <option value="1">1 день</option>
+              <option value="2">2 дня</option>
+              <option value="3">3 дня</option>
+              <option value="4">4 дня</option>
+              <option value="5">5 дней</option>
+            </select>
+          </div>
+          <div class="calculator__field">
+            <span class="calculator__field-label">Предварительная стоимость:</span>
+            <div class="calculator__result">21 543,00 ₽</div>
+          </div>
+          <div class="calculator__field">
+            <button class="calculator__submit gradient-button">Рассчитать стоимость</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Главная</title>
+    <link rel="stylesheet" href="/styles/style.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+  </head>
+  <body>
+    {{> sections/Header }} {{> sections/Menu }} {{> MegaMenu }} {{> MegaMenuMobile }}
+
+    <main class="main">
+      <div class="main__wrapper">
+        <section class="hero">
+          <div class="hero__wrapper container">
+            <div class="hero__slider">{{> sections/HeroSlider }}</div>
+            <div class="hero__form">{{> sections/HeroForm}}</div>
+          </div>
+        </section>
+        {{> sections/Clients }} {{> sections/Services }} {{> sections/Stages }} {{> sections/About }} {{> sections/Team }} {{> sections/Differences }} {{>
+        sections/Equipment }} {{> sections/Prices}} {{> sections/Calculator}} {{> sections/Request isGrey=true}} {{> sections/Portfolio}} {{> sections/Reviews}}
+        {{> sections/VideoSection}} {{> sections/Production}} {{> sections/Questions}} {{> sections/Articles}} {{> sections/Contacts}} {{> sections/Request}}
+      </div>
+    </main>
+
+    {{> sections/Footer }} {{> PopupCalculation}} {{> PopupRequest}}
+
+    <script type="module" src="./scripts/main.js"></script>
+  </body>
+</html>

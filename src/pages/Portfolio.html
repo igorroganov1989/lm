@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Портфолио</title>
+    <link rel="stylesheet" href="/styles/style.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+  </head>
+  <body>
+    {{> sections/Header }} {{> sections/Menu }} {{> MegaMenu }} {{> MegaMenuMobile }}
+
+    <main class="main">
+      <div class="main__wrapper">
+        {{> BreadCrumbs breadcrumbs=breadcrumbsPortfolio}}
+        <div class="main__container container">
+          <h1 class="main__title">Портфолио</h1>
+          <div class="main__subtitle">Реализованные проекты</div>
+        </div>
+      </div>
+      <section class="listing">
+        <div class="listing__wrapper container">
+          <ul class="listing__tabs">
+            <li class="listing__tab listing__tab--active">
+              <a href="" class="listing__tab-link">Все публикации</a>
+            </li>
+            <li class="listing__tab">
+              <a href="" class="listing__tab-link">Статьи</a>
+            </li>
+            <li class="listing__tab">
+              <a href="" class="listing__tab-link">Новости</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    {{> sections/Footer }} {{> PopupCalculation}} {{> PopupRequest}}
+
+    <script type="module" src="../scripts/main.js"></script>
+  </body>
+</html>

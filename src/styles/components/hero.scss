@@ -1,0 +1,22 @@
+.hero {
+  &__wrapper {
+    display: flex;
+    gap: 32px;
+    @media (max-width: 1400px) {
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+  &__slider {
+    width: calc(67.33% - 16px);
+    @media (max-width: 1400px) {
+      width: 100%;
+    }
+  }
+  &__form {
+    width: calc(32.67% - 16px);
+    @media (max-width: 1400px) {
+      width: 100%;
+    }
+  }
+}

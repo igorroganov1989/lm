@@ -1,0 +1,21 @@
+<div class="bread-crumbs">
+  <div class="bread-crumbs__wrapper container">
+    <ul class="bread-crumbs__list">
+      {{#each breadcrumbs}}
+
+      <li class="bread-crumbs__item">
+        {{#if url}}
+        <a class="bread-crumbs__link" href="{{url}}">{{title}}</a>
+        {{else}}
+        <span class="bread-crumbs__span">{{title}}</span>
+        {{/if}}
+      </li>
+
+      {{#unless @last}}
+      <li class="bread-crumbs__separator">
+        <img src="/images/breadCrumbsArrow.svg" alt="" class="bread-crumbs__arrow" />
+      </li>
+      {{/unless}} {{/each}}
+    </ul>
+  </div>
+</div>

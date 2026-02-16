@@ -1,0 +1,27 @@
+.social {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  &__link {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &--black{
+      background-color: var(--black);
+      box-shadow: 0px 2px 2px 0px #105a611a;
+    }
+      @media (max-width: 1024px) {
+       background-color: var(--black);
+      box-shadow: 0px 2px 2px 0px #105a611a;
+    }
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+}
