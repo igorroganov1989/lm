@@ -464,3 +464,20 @@ body {
     }
   }
 }
+
+.articles-page {
+  &__list {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: calc(33.333% - 32px * 2 / 3);
+    @media (max-width: 1200px) {
+      width: calc(50% - 16px);
+    }
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+}

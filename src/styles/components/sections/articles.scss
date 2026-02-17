@@ -13,6 +13,11 @@
       width: 264px !important;
     }
   }
+  &__card-wrapper {
+    background-color: var(--bg-deep-grey);
+    border-radius: 16px;
+    height: 100%;
+  }
   &__img-wrapper {
     height: 290px;
     display: flex;
