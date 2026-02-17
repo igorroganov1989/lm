@@ -16,6 +16,12 @@ export default defineConfig({
         breadcrumbsReviews: [{ title: "Главная", url: "/" }, { title: "Отзывы" }],
         breadcrumbsReview: [{ title: "Главная", url: "/" }, { title: "Отзывы", url: "/pages/reviews" }, { title: "Отзыв от Ильи Сафронова " }],
         breadcrumbsPrices: [{ title: "Главная", url: "/" }, { title: "Цены на металлообработку" }],
+        breadcrumbsProducion: [{ title: "Главная", url: "/" }, { title: "Производство изделий из металла" }],
+        breadcrumbsProducionDetails: [
+          { title: "Главная", url: "/" },
+          { title: "Производство изделий из металла", url: "/pages/production" },
+          { title: "Корзины для кондиционера" },
+        ],
         projectImages: ["/images/project1.png", "/images/portfolio2.png", "/images/portfolio3.png", "/images/portfolio4.png"],
         projectText: [
           "Изделия из просечно-вытяжной сетки – пожалуй самое недооцененное декоративное решение в России. Зарубежные архитекторы и дизайнеры достаточно давно используют эту технологию для того, чтобы прикрыть технические зоны, разнообразить фасад или как в этом примере не использовать стандартные панели «Армстронг». Помимо всех других преимуществ, изделия из ПВС достаточно демократичны в цене и выглядят намного дороже стоимости.",

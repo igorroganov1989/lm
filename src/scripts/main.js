@@ -190,25 +190,38 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
   const initProductionSlider = () => {
-    const slider = document.querySelector(".production__slider");
+    const sliders = document.querySelectorAll(".production__slider");
 
-    if (!slider) return;
+    if (sliders.length < 1) return;
 
-    new Swiper(slider, {
+    const baseConfig = {
       modules: [Navigation],
       spaceBetween: 32,
-      navigation: {
-        nextEl: slider.querySelector(".production__slider-button-next"),
-        prevEl: slider.querySelector(".production__slider-button-prev"),
-      },
       breakpoints: {
         0: {
           slidesPerView: "auto",
         },
-        1648: {
-          slidesPerView: 4,
-        },
       },
+    };
+
+    sliders.forEach((slider) => {
+      const isDetails = slider.classList.contains("details__slider");
+
+      new Swiper(slider, {
+        ...baseConfig,
+
+        navigation: {
+          nextEl: slider.querySelector(".production__slider-button-next"),
+          prevEl: slider.querySelector(".production__slider-button-prev"),
+        },
+
+        breakpoints: {
+          ...baseConfig.breakpoints,
+          1648: {
+            slidesPerView: isDetails ? 3 : 4,
+          },
+        },
+      });
     });
   };
 
@@ -717,6 +730,22 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
+  const initDetailsSlider = () => {
+    const slider = document.querySelector(".details-slider__wrapper");
+
+    if (!slider) return;
+
+    new Swiper(slider, {
+      modules: [Navigation],
+      slidesPerView: 1,
+      spaceBetween: 1,
+      navigation: {
+        nextEl: slider.querySelector(".details-slider__arrow-next"),
+        prevEl: slider.querySelector(".details-slider__arrow-prev"),
+      },
+    });
+  };
+
   showMegaMenu();
   initAccordion();
   initHeroSlider();
@@ -735,4 +764,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initArticlesSlider();
   initMap();
   initGallerySlider();
+  initDetailsSlider();
 });
