@@ -1,5 +1,5 @@
 import Swiper from "swiper";
-import { Navigation } from "swiper/modules";
+import { Navigation, Thumbs } from "swiper/modules";
 import * as FilePond from "filepond";
 import IMask from "imask";
 import { Fancybox } from "@fancyapps/ui";
@@ -297,7 +297,7 @@ document.addEventListener("DOMContentLoaded", () => {
         labelIdle: `
       <div class="hero-form__dropzone">
         <span class="hero-form__dropzone-text">Прикрепить файлы</span>
-        <img src="./images/cloud.svg" alt="" class="hero-form__dropzone-icon" />
+        <img src="/images/cloud.svg" alt="" class="hero-form__dropzone-icon" />
       </div>
     `,
 
@@ -689,6 +689,34 @@ document.addEventListener("DOMContentLoaded", () => {
     dragToClose: false,
   });
 
+  const initGallerySlider = () => {
+    document.querySelectorAll("[data-gallery]").forEach((gallery) => {
+      const thumbsEl = gallery.querySelector(".gallery-slider__thumbs");
+      const topEl = gallery.querySelector(".gallery-slider__top");
+      const nextEl = gallery.querySelector(".gallery-slider__arrow-next");
+      const prevEl = gallery.querySelector(".gallery-slider__arrow-prev");
+
+      if (!thumbsEl || !topEl) return;
+
+      const thumbs = new Swiper(thumbsEl, {
+        modules: [Thumbs],
+        spaceBetween: 16,
+        slidesPerView: "auto",
+        watchSlidesProgress: true,
+        slideToClickedSlide: true,
+        freeMode: true,
+        watchOverflow: true,
+      });
+
+      new Swiper(topEl, {
+        modules: [Navigation, Thumbs],
+        spaceBetween: 16,
+        navigation: { nextEl, prevEl },
+        thumbs: { swiper: thumbs },
+      });
+    });
+  };
+
   showMegaMenu();
   initAccordion();
   initHeroSlider();
@@ -706,4 +734,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initProductionSlider();
   initArticlesSlider();
   initMap();
+  initGallerySlider();
 });

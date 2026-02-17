@@ -1,7 +1,10 @@
 <section class="prices section">
   <div class="prices__wrapper section__wrapper container">
-    <h2 class="prices__title section__title">Цены</h2>
-    <div class="prices__subtitle section__subtitle">Краткие ответы на самые частые вопросы</div>
+    <h2 class="prices__title section__title">{{title}}</h2>
+    {{#if subtitle}}
+    <div class="prices__subtitle section__subtitle">{{subtitle}}</div>
+    {{/if}}
+
     <div class="prices__tabs" data-tabs>
       <ul class="prices__nav-wrapper">
         <li class="prices__nav-item" data-tab-trigger>Лазерная резка</li>

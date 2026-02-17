@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Отзыв</title>
+    <link rel="stylesheet" href="/styles/style.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+  </head>
+  <body>
+    {{> sections/Header }} {{> sections/Menu }} {{> MegaMenu }} {{> MegaMenuMobile }}
+
+    <main class="main">
+      <div class="main__wrapper">
+        {{> BreadCrumbs breadcrumbs=breadcrumbsReview}}
+        <div class="main__container container">
+          <h1 class="main__title">Отзыв от Ильи Сафронова</h1>
+          <div class="main__subtitle">Отзыв клиента</div>
+        </div>
+      </div>
+      <div class="sticky-columns">
+        <div class="sticky-columns__wrapper container">
+          <div class="sticky-columns__column">
+            <div class="reviews">
+              <div class="reviews__card-wrapper">
+                <div class="reviews__slide-name">Илья Сафронов</div>
+                <div class="reviews__slide-stars">
+                  <img src="/images/star-filled.svg" alt="" class="reviews__slide-star" />
+                  <img src="/images/star-filled.svg" alt="" class="reviews__slide-star" />
+                  <img src="/images/star-filled.svg" alt="" class="reviews__slide-star" />
+                  <img src="/images/star-filled.svg" alt="" class="reviews__slide-star" />
+                  <img src="/images/star-filled.svg" alt="" class="reviews__slide-star" />
+                </div>
+                <div class="reviews__services-title">Оказанные услуги:</div>
+                <ul class="reviews__sevices-list">
+                  <li class="reviews__services-item">Лазерная резка</li>
+                  <li class="reviews__services-item">Гибочные работы</li>
+                  <li class="reviews__services-item">Лазерная</li>
+                  <li class="reviews__services-item">Гибочные работы</li>
+                  <li class="reviews__services-item">Лазерная резка</li>
+                  <li class="reviews__services-item">Гибочные работы</li>
+                </ul>
+                <div class="reviews__slide-images">
+                  <img src="/images/review1.png" alt="" class="reviews__slide-img" />
+                  <img src="/images/review2.png" alt="" class="reviews__slide-img" />
+                  <img src="/images/review3.png" alt="" class="reviews__slide-img" />
+                </div>
+                <div class="reviews__slide-title">Все сделали точно по чертежу</div>
+                <div class="reviews__slide-text">
+                  Заказывали резку и гибку небольших партий деталей. Все элементы пришли строго в размерах, без заусенцев, поверхность чистая. Особенно
+                  порадовали сроки — уложились быстрее, чем обещали. Удобно, что можно сразу загрузить файл и получить цену.
+                </div>
+                <a href="" class="reviews__more">Читать далее...</a>
+              </div>
+            </div>
+          </div>
+          <div class="sticky-columns__column sticky-columns__column--form">
+            <form action="#" class="hero-form sticky-columns__form">
+              <div class="hero-form__wrapper">
+                <div class="hero-form__title">Получите расчет стоимости и сроков вашего проекта за 10 минут</div>
+
+                <div class="hero-form__section">
+                  <span class="hero-form__label">Ваше имя</span>
+                  <input type="text" class="hero-form__input-name hero-form__input" name="name" placeholder="Имя..." />
+                </div>
+                <div class="hero-form__section">
+                  <span class="hero-form__label">Укажите номер телефона</span>
+                  <input type="tel" class="hero-form__input-phone hero-form__input" name="phone" />
+                </div>
+                <button class="hero-form__submit">Получить расчет бесплатно</button>
+                <div class="hero-form__license">Нажимая на кнопку, я принимаю условия <a href="/" target="_blank">соглашения</a></div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      {{> sections/Reviews }} {{> sections/Request }}
+    </main>
+
+    {{> sections/Footer }} {{> PopupCalculation}} {{> PopupRequest}}
+
+    <script type="module" src="../scripts/main.js"></script>
+  </body>
+</html>

@@ -3,9 +3,8 @@
     border-radius: 16px;
     background-color: var(--bg-deep-grey);
     padding: 36px 32px;
+    height: 100%;
     @media (max-width: 768px) {
-      flex-direction: column;
-      gap: 10px;
       padding: 20px 16px;
     }
   }

@@ -19,6 +19,18 @@
       width: 264px !important;
     }
   }
+  &__card-wrapper {
+    background-color: var(--bg-deep-grey);
+    padding: 36px 32px;
+    border-radius: 16px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    @media (max-width: 1024px) {
+      padding: 20px 16px;
+    }
+  }
   &__slide-title {
     margin-top: 32px;
     font-weight: 500;

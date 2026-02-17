@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Цены</title>
+    <link rel="stylesheet" href="/styles/style.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+  </head>
+  <body>
+    {{> sections/Header }} {{> sections/Menu }} {{> MegaMenu }} {{> MegaMenuMobile }}
+
+    <main class="main">
+      <div class="main__wrapper">
+        {{> BreadCrumbs breadcrumbs=breadcrumbsPrices}}
+        <div class="main__container container">
+          <h1 class="main__title">Цены на металлообработку</h1>
+          <div class="main__subtitle">Актуальные цены на услуги металлообработки с учётом технологии и сложности работ</div>
+        </div>
+
+        {{> sections/Prices title="Лазерная резка" }}
+        <section class="info section">
+          <div class="info__wrapper section__wrapper container">
+            <h2 class="info__title-big section__title">Дополнительная информация</h2>
+            <div class="info__inner-list">
+              <div class="info__inner">
+                <h2 class="info__title-small">Минимальная стоимость заказа за одну операцию</h2>
+                <ul class="info__list">
+                  <li class="info__item">5 000 руб. без учета стоимости материалов.</li>
+                  <li class="info__item">
+                    В случае значительного увеличения объема последующих заказов, сумма 5 000 руб. включается в качестве скидки в следующий заказ.
+                  </li>
+                </ul>
+                <div class="info__text">
+                  <p>
+                    Технологические возможности нашего предприятия позволяют осуществлять раскрой металла методом лазерной резки с допусками по 14 квалитету.
+                  </p>
+                  <p>Возможно срочное изготовление заказа - в день обращения или на следующий день, стоимость рассчитывается индивидуально.</p>
+                </div>
+              </div>
+              <div class="info__inner">
+                <h2 class="info__title-small">Рекомендации к входящей документации</h2>
+                <ul class="info__list">
+                  <li class="info__item">Для расчета стоимости производства изделий Вам нужно предоставить чертежи в формате DWG или DXF;</li>
+                  <li class="info__item">Масштаб деталей в чертежах 1:1;</li>
+                  <li class="info__item">Контуры деталей должны быть в нулевом слое и выполнены в графических примитивах (линия, окружность, арка);</li>
+                  <li class="info__item">Использование в чертежах сплайнов и эллипсов крайне не желательно.</li>
+                </ul>
+              </div>
+              <div class="info__inner">
+                <h2 class="info__title-small">Требования к материалам заказчика</h2>
+                <ul class="info__list">
+                  <li class="info__item">при поставке материалов на склад ООО «СиМП» обязательно предоставление накладной по форме М-15</li>
+                  <li class="info__item">материал не должен иметь коррозии и заломов;</li>
+                  <li class="info__item">допустимый прогиб листа на длине 2500 мм не должен превышать 50 мм;</li>
+                  <li class="info__item">заготовка должна иметь прямоугольную форму;</li>
+                  <li class="info__item">
+                    желательно предоставление чертежей разверток или иной документации в формате DXF или в формате AutoCAD, при отсутствии документации в этих
+                    форматах, мы можем помочь Вам их разработать, стоимость подготовки документации определяется для каждого заказа индивидуально, в некоторых
+                    случаях мы можем сделать это бесплатно.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        {{> sections/Request isGrey=true}} {{> sections/Portfolio}} {{> sections/VideoSection}} {{> sections/Questions}} {{> sections/Request}}
+      </div>
+    </main>
+
+    {{> sections/Footer }} {{> PopupCalculation}} {{> PopupRequest}}
+
+    <script type="module" src="../scripts/main.js"></script>
+  </body>
+</html>

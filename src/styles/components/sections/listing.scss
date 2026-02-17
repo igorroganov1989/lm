@@ -1,12 +1,16 @@
 .listing {
   &__wrapper {
     padding-top: 44px;
-    padding-bottom: 180px;
+    padding-bottom: 80px;
   }
   &__tabs {
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
+    padding-bottom: 60px;
+    @media (max-width: 768px) {
+      padding-bottom: 30px;
+    }
   }
   &__tab {
     &--active {
@@ -129,10 +133,8 @@
     }
   }
   &__body {
-    padding-top: 60px;
     padding-bottom: 40px;
     @media (max-width: 768px) {
-      padding-top: 30px;
       padding-bottom: 20px;
     }
   }

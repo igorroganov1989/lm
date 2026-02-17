@@ -182,6 +182,10 @@ body {
     background-clip: text;
     color: transparent;
     margin-top: 8px;
+    @media (max-width: 768px) {
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
   &__subtitle {
     color: var(--steel);
@@ -250,6 +254,7 @@ body {
   position: relative;
   visibility: visible;
   opacity: 1;
+  z-index: 1;
 }
 
 [data-collapse-content] {
@@ -400,6 +405,12 @@ body {
         order: 1;
       }
     }
+    &--form {
+      align-self: stretch;
+    }
+  }
+  &__form {
+    height: 100%;
   }
 }
 
@@ -412,6 +423,23 @@ body {
   &__item {
     width: calc(50% - 16px);
     @media (max-width: 1024px) {
+      width: 100%;
+    }
+  }
+}
+
+.reviews-page {
+  &__list {
+    display: flex;
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  &__item {
+    width: calc(33.333% - 32px * 2 / 3);
+    @media (max-width: 1200px) {
+      width: calc(50% - 16px);
+    }
+    @media (max-width: 768px) {
       width: 100%;
     }
   }
