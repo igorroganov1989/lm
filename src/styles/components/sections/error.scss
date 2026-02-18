@@ -1,0 +1,35 @@
+.error-section {
+  &__outer {
+    min-height: 500px;
+    position: relative;
+    @media (max-width: 768px) {
+      min-height: 300px;
+    }
+  }
+  &__link {
+    width: fit-content;
+  }
+  &__text {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-weight: 500;
+    font-size: 400px;
+    line-height: 282px;
+    background: var(--gradient);
+    background-clip: text;
+    color: transparent;
+    @media (max-width: 1024px) {
+      font-size: 300px;
+      line-height: 216px;
+    }
+    @media (max-width: 768px) {
+      font-size: 200px;
+      line-height: 143px;
+    }
+    @media (max-width: 420px) {
+      font-size: 150px;
+      line-height: 110px;
+    }
+  }
+}

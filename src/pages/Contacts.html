@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <title>Проект в портфолио</title>
+    <title>Контакты</title>
     <link rel="stylesheet" href="/styles/style.scss" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
@@ -12,18 +12,12 @@
 
     <main class="main">
       <div class="main__wrapper">
-        {{> BreadCrumbs breadcrumbs=breadcrumbsProject}}
+        {{> BreadCrumbs breadcrumbs=breadcrumbsContacts}}
         <div class="main__container container">
-          <h1 class="main__title">Потолочные элементы из ПВС</h1>
+          <h1 class="main__title">Наши контакты</h1>
         </div>
-        <div class="sticky-columns">
-          <div class="sticky-columns__wrapper container">
-            <div class="sticky-columns__column">{{> sections/GallerySlider images=projectImages text=projectText }}</div>
-            <div class="sticky-columns__column sticky-columns__column--sticky">{{> sections/HeroForm}}</div>
-          </div>
-        </div>
-        {{> sections/Services }} {{> sections/Request}}
       </div>
+      {{> sections/Contacts }} {{> sections/ContactsRoute}} {{> sections/ContactsRequisites}} {{> sections/Request}}
     </main>
 
     {{> sections/Footer }} {{> PopupCalculation}} {{> PopupRequest}}

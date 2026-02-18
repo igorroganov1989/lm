@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
-    <title>Проект в портфолио</title>
+    <title>404</title>
     <link rel="stylesheet" href="/styles/style.scss" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex, nofollow" />
@@ -12,18 +12,13 @@
 
     <main class="main">
       <div class="main__wrapper">
-        {{> BreadCrumbs breadcrumbs=breadcrumbsProject}}
+        {{> BreadCrumbs breadcrumbs=breadcrumbsError}}
         <div class="main__container container">
-          <h1 class="main__title">Потолочные элементы из ПВС</h1>
+          <h1 class="main__title">Страница не найдена</h1>
+          <div class="main__subtitle">Похоже, такой страницы больше нет или она была перемещена</div>
         </div>
-        <div class="sticky-columns">
-          <div class="sticky-columns__wrapper container">
-            <div class="sticky-columns__column">{{> sections/GallerySlider images=projectImages text=projectText }}</div>
-            <div class="sticky-columns__column sticky-columns__column--sticky">{{> sections/HeroForm}}</div>
-          </div>
-        </div>
-        {{> sections/Services }} {{> sections/Request}}
       </div>
+      {{> sections/Error }}
     </main>
 
     {{> sections/Footer }} {{> PopupCalculation}} {{> PopupRequest}}

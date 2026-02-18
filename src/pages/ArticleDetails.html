@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Статья</title>
+    <link rel="stylesheet" href="/styles/style.scss" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+  </head>
+  <body>
+    {{> sections/Header }} {{> sections/Menu }} {{> MegaMenu }} {{> MegaMenuMobile }}
+
+    <main class="main">
+      <div class="main__wrapper">
+        {{> BreadCrumbs breadcrumbs=breadcrumbsArticleDetails}}
+        <div class="main__container container">
+          <h1 class="main__title">Металлическое сечение и чем оно отличается от разреза</h1>
+           <div class="main__subtitle">В чертежах по металлообработке есть две вещи, которые на первый взгляд выглядят почти одинаково: сечение и разрез. Оба «про внутренности», оба связаны с мысленным рассечением детали плоскостью.</div>
+        </div>
+        <div class="sticky-columns">
+          <div class="sticky-columns__wrapper container">
+            <div class="sticky-columns__column">{{> sections/ServiceDetails }}</div>
+            <div class="sticky-columns__column sticky-columns__column--sticky">{{> sections/Contents }}</div>
+          </div>
+        </div>
+        {{> sections/Services}} {{> sections/Request}}
+      </div>
+    </main>
+
+    {{> sections/Footer }} {{> PopupCalculation}} {{> PopupRequest}}
+
+    <script type="module" src="../scripts/main.js"></script>
+  </body>
+</html>

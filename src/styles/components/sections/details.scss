@@ -22,6 +22,14 @@
     border-radius: 16px;
     width: 100%;
   }
+  &__video {
+    border-radius: 16px;
+    width: 100%;
+    overflow: hidden;
+    iframe {
+      width: 100%;
+    }
+  }
   &__title {
     margin-bottom: 6px;
     font-weight: 600;
