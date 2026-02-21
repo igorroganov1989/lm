@@ -6,6 +6,15 @@
     right: 0;
     top: 0;
     overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--bg-deep-grey) var(--grey);
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+    &-webkit-scrollbar-thumb {
+      background: var(--bg-deep-grey);
+      border-radius: 6px;
+    }
     background-color: var(--black);
     padding-top: 32px;
     padding-bottom: 32px;

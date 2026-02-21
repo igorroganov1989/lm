@@ -208,6 +208,10 @@ body {
   overflow: hidden;
 }
 
+html {
+  scrollbar-gutter: stable;
+}
+
 [data-accordion-content] {
   overflow: hidden;
   max-height: 0;
