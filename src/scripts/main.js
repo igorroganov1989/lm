@@ -20,6 +20,11 @@ import "filepond/dist/filepond.css";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  const getScrollbarWidth = () => {
+    return window.innerWidth - document.documentElement.clientWidth;
+  };
+
   const showMegaMenu = () => {
     const btn = document.querySelector(".menu__item--services");
     const megaMenu = document.querySelector(".mega-menu__outer");
@@ -35,6 +40,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const bodyLockClass = "locked";
 
     const openMenu = () => {
+      const scrollbarWidth = getScrollbarWidth();
+
       if (window.innerWidth > 1024) {
         const menuBottomCoord = menu.getBoundingClientRect().bottom;
         megaMenu.classList.add(openClass);
@@ -47,12 +54,15 @@ document.addEventListener("DOMContentLoaded", () => {
         megaMenuMobile.style.maxHeight = `calc(100vh - ${menuBottomCoord}px)`;
       }
 
+      document.body.style.paddingRight = `${scrollbarWidth}px`;
       document.body.classList.add(bodyLockClass);
     };
 
     const closeMenu = () => {
       megaMenu.classList.remove(openClass);
       megaMenuMobile.classList.remove(openClassMobile);
+
+      document.body.style.paddingRight = "";
       document.body.classList.remove(bodyLockClass);
     };
 
